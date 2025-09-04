@@ -1,4 +1,4 @@
-# 🔗 LinkedListInfinityEngine_CPP
+#  LinkedListInfinityEngine_CPP
 
 A fully-featured, menu-driven, CLI-based, object-oriented Linked List Engine built in C++.  
 This is not just another linked list program — this is a **structure-level simulation framework** that lets you interactively build, manage, manipulate, and visualize how linked lists work under the hood with memory-safe pointer manipulation and operator overloading.
