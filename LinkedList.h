@@ -13,10 +13,10 @@ struct Node
 };
 class solLList
 {
-    int nNodesSize;                                                        
+    int nNodesSize = 0;                                                    
     Node *linkedList = nullptr;                                                             
     Node *tailNode = nullptr;                                                              
-    Node *headNode = nullptr;                                                                          
+    Node *headNode = nullptr;
     
     public:
     	friend istream & operator>>(istream &In,solLList &S);              
@@ -133,6 +133,7 @@ void solLList::delMidLastNodeLList(Node *delNode,int idx){
 		            tailNode = prevNode;
 		            
 		            tailNode->next = nullptr;
+		            delete delNode;                                            //Free the tail node from memory
 		}
 		else{
 	   	delNode = currNode;                                                
@@ -146,6 +147,11 @@ void solLList::delMidLastNodeLList(Node *delNode,int idx){
 istream & operator>>(istream &In,solLList &S)
 {
 	cout<<"\n\n\t   Please Enter the Size of the Linked List that you Wanna Create : ",In>>S.nNodesSize;
+	if(S.nNodesSize <= 0){                                                                                        //Validation: size must be positive
+		cout<<"\n\n\t   Invalid Size! Please Enter a Positive Integer (Size Must Be >= 1).\n";
+		S.nNodesSize = 0;
+		return In;
+	}
 	if(S.linkedList!=nullptr)                                                                                     //Means Its ALready Exists , Firstly Clear It
 	{
 		S.clearLinkedList();                                                                           //If Linked List is Not Empty Then First need to Clear it 
@@ -178,7 +184,7 @@ istream & operator>>(istream &In,solLList &S)
 	 
 	 S.headNode = S.linkedList;                                                     
 	//----------------------------------------------------------------------------
-	if(!currNode->next) currNode->next = nullptr;
+	if(currNode && !currNode->next) currNode->next = nullptr;                 //Guard: only access next if currNode is valid
 	
 	return In;
 }
@@ -229,6 +235,7 @@ void solLList::addBegin(){
 	headNode = newNode;
     
     linkedList = headNode;
+    if(tailNode == nullptr) tailNode = headNode;                              //Edge case: first node; tailNode must also be set
     //------------------------------------------------------------------------------------------
 		
 	cout<<"\n\n\t                    Success :: New Node is Added in the Beggining of the Linked List! ";
@@ -278,8 +285,15 @@ void solLList::operator++()
 
     //Adjusing the Links     
 	
-	tailNode->next = newNode;
-	tailNode = tailNode->next;                                 
+	if(tailNode == nullptr){                                                   //Edge case: list is empty; initialize both head and tail
+		linkedList = newNode;
+		headNode = newNode;
+		tailNode = newNode;
+	}
+	else{
+		tailNode->next = newNode;
+		tailNode = tailNode->next;                                 
+	}
     
 	nNodesSize++;
 }
