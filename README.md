@@ -1,5 +1,9 @@
 #  LinkedListInfinityEngine_CPP
 
+![Language](https://img.shields.io/badge/language-C%2B%2B-blue?style=flat-square&logo=c%2B%2B) ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) ![Stars](https://img.shields.io/github/stars/GeekyChirag-030/LinkedListInfinityEngine_CPP?style=flat-square) ![Forks](https://img.shields.io/github/forks/GeekyChirag-030/LinkedListInfinityEngine_CPP?style=flat-square)
+
+![Topic](https://img.shields.io/badge/topic-Data%20Structures-orange?style=flat-square) ![Topic](https://img.shields.io/badge/topic-Linked%20List-orange?style=flat-square) ![Topic](https://img.shields.io/badge/topic-OOP-orange?style=flat-square) ![Topic](https://img.shields.io/badge/topic-CLI-orange?style=flat-square) ![Topic](https://img.shields.io/badge/topic-DSA-orange?style=flat-square) ![Topic](https://img.shields.io/badge/topic-Algorithms-orange?style=flat-square)
+
 A fully-featured, menu-driven, CLI-based, object-oriented Linked List Engine built in C++.  
 This is not just another linked list program — this is a **structure-level simulation framework** that lets you interactively build, manage, manipulate, and visualize how linked lists work under the hood with memory-safe pointer manipulation and operator overloading.
 
