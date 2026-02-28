@@ -194,7 +194,7 @@ NULL <-- 30 <-- NEW <-- 10
 
 ---
 
-## ⚠️ Validations & Edge Handling
+##  Validations & Edge Handling
 
 
 ---
@@ -241,12 +241,6 @@ g++ useLList.cpp -o LList.exe
 ## ❤️ Contributions / Extend
 💬 Open to ideas and improvements
 - You’re free to fork and extend!
-- Suggestions for Circular/Doubly Linked List upgrades welcome
-- Circular Linked List
-- List Sorting
-- Swap/Reversal Features
-- File Exporting / Saving
-
 ---
 ---
 ###  Rate the Repo / Star the Repo
