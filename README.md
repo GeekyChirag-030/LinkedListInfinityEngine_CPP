@@ -233,11 +233,11 @@ g++ useLList.cpp -o LList.exe
 | List size = 0 update | ✅ |
 
 ---
-## ❤️ Contributions / Extend
+## ❤️ Contributions
 💬 Open to ideas and improvements
 - You’re free to fork and extend!
 ---
-###  Rate the Repo / Star the Repo
+###  Star this Repo
 Show your support by:
 - Starring the repository ⭐
 - Sharing it to inspire other devs 
