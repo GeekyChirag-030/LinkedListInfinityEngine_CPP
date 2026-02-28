@@ -134,7 +134,7 @@ getSize()     Total Nodes
 
 ```
 
-## 🧠 Object-Oriented Design
+## Object-Oriented Design
 Concept	Applied
 -  Encapsulation	✅ All data members are private
 -  Public API Access	✅ Interactions happen only through public member methods
@@ -144,7 +144,7 @@ Concept	Applied
 
 ---
 
-## 📏 Internal Architecture
+## Internal Architecture
 
 | Component       | Description |
 |-----------------|-------------|
@@ -157,7 +157,7 @@ Concept	Applied
 
 ---
 
-## 🧩 Object-Oriented Blueprint
+## Object-Oriented Blueprint
 
 This project obeys OOP principles strictly:
 
@@ -169,7 +169,7 @@ This project obeys OOP principles strictly:
 
 ---
 
-## 🧪 Sample Outputs
+## Sample Outputs
 ```txt
 Enter the Size of Linked List: 3
 Input Node 1: 10
@@ -190,11 +190,6 @@ Updated List:
 Recursive Reverse:
 NULL <-- 30 <-- NEW <-- 10
 ```
-
-
----
-
-##  Validations & Edge Handling
 
 
 ---
@@ -242,13 +237,11 @@ g++ useLList.cpp -o LList.exe
 💬 Open to ideas and improvements
 - You’re free to fork and extend!
 ---
----
 ###  Rate the Repo / Star the Repo
 Show your support by:
 - Starring the repository ⭐
 - Sharing it to inspire other devs 
-- Forking and evolving it ♻
-
+- Forking and evolving it 
 ---
  Let the Linked List Engine Run...
 **Thank you for visiting LinkedListInfinityEngine_CPP**
