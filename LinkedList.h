@@ -33,6 +33,7 @@ class solLList
 		
 		void clearLinkedList();                                          
 		
+		void reverseLList();
 		int getSize();                                                     
 		bool isValidOprAdd(int);                                            
 		bool isValidOprDel(int);                                          
@@ -142,7 +143,26 @@ void solLList::delMidLastNodeLList(Node *delNode,int idx){
 	    delete delNode;  	
 }
 }
+
+
+void solLList::reverseLList(){
+	//Edge Case
+	if(!linkedList->next) return;
 	
+	//Main Logic 
+	Node *currNode = linkedList, *prev = nullptr , *currNext = nullptr;
+	while(currNode){
+		currNext = currNode->next;
+		if(currNode==linkedList) tailNode = currNode;
+		currNode->next = prev;
+		
+		prev = currNode;
+		currNode = currNext;
+	}
+	
+	linkedList = prev;
+	headNode = linkedList; 
+}	
 //Istream Customly Overloaed Opertaor Function : Creating and management of the linked list from scratch Again Each Time 	
 istream & operator>>(istream &In,solLList &S)
 {
@@ -464,7 +484,7 @@ void printLinkedListRules() {
     cout << "\t Designed to safely guide and simulate linked list usage.\n";
 
     cout << "\n\t===========================================================\n";
-    cout << "\t       Built by the Tycoonic Problem Solver - KING LEVEL\n";
+    cout << "\t       Built by the Problem Solver \n";
     cout << "\t===========================================================\n\n";
 }
 
@@ -511,13 +531,20 @@ void action(string tIn,solLList &S){
 
 	else if((tIn[0]=='h') || (tIn[0]=='H')){
 		if(S.oprValidityCheck()) cout<<"\n\n\t               ----------   Head Node is ------------ :     |"<<S.prHead()<<" |";
-		else cout<<"\n\n\t                Invalid Operation ::: Linked List Not Exists (Please Create the Linked List First) <<Menu Option 1.>> \n\n";}	
-
+		else cout<<"\n\n\t                Invalid Operation ::: Linked List Not Exists (Please Create the Linked List First) <<Menu Option 1.>> \n\n";}
+			
+	else if(tIn[0]=='R'){
+		if(S.oprValidityCheck()){
+			S.reverseLList();
+			cout<<"\n\n\t  --------- Linked List Successfully Reversed InPlace ---------- \n";
+		}
+		else cout<<"\n\n\t                Invalid Operation ::: Linked List Not Exists (Please Create the Linked List First) <<Menu Option 1.>> \n\n";}
+		
 	else if((tIn[0]=='t') ||(tIn[0]=='T')){
 		if(S.oprValidityCheck()) cout<<"\n\n\t               ----------   Tail Node is ------------ :     |"<<S.prTail()<<" |";
 		else cout<<"\n\n\t                Invalid Operation ::: Linked List Not Exists (Please Create the Linked List First) <<Menu Option 1.>> \n\n";}	
 	
-	else if(tIn[0]=='r' || tIn[0]=='R'){
+	else if(tIn[0]=='r'){
 		if(S.oprValidityCheck()) {cout<<"\n\n\t                 Printing the Linked List in Reverse : \n"<<"  NULL ";
 		                          S.printRevLList(S.getHeadLList());}
 		else cout<<"\n\n\t                Invalid Operation ::: Linked List Not Exists (Please Create the Linked List First) <<Menu Option 1.>> \n\n";}	
@@ -549,7 +576,7 @@ void startLList(){
     cout<<"\t    __________________________________________________________________________________\n";
      
 	cout<<"\n\n\n\t     *-*-*-*-*-*-*-*-*-*-*-*- Operations Menu *-*-*-*-*-*-*-*-*-*-*-*-\n\n";
-	cout<<"\n\t     [1] Creation of Linked List From Scratch \n\t     [2] Adding Node in the Beggining of Linked List \n\t     [3] Adding Node by Default at the End or Last of the Linked List \n\t     [4] Adding Node at Any Where in the Linked List \n\t     [5] Delition of Node from the Beggining of Linked List \n\t     [6] Delition of Node from the Last or End of the Linked List By Default \n\t     [7] Delition of Node from Anywhere in the Linked List \n\t     [8] Printing Linked List \n\t     [9] Getting Size of the Linked List \n\t     [h] Printing the Head Node (Data) of the Linked List \n\t     [t] Printing the Tail Node of the Linked List \n\t     [r] Printing the Linked List in Reverse \n\t     [s] Searching the Node inside the Linked List \n\t     [#] Clearing the Linked List \n\t     [?] LinkedListInfinityEngine_CPP - RULES & USAGE \n\t     [!]  Exit / Stop ";
+	cout<<"\n\t     [1] Creation of Linked List From Scratch \n\t     [2] Adding Node in the Beggining of Linked List \n\t     [3] Adding Node by Default at the End or Last of the Linked List \n\t     [4] Adding Node at Any Where in the Linked List \n\t     [5] Delition of Node from the Beggining of Linked List \n\t     [6] Delition of Node from the Last or End of the Linked List By Default \n\t     [7] Delition of Node from Anywhere in the Linked List \n\t     [8] Printing Linked List \n\t     [9] Getting Size of the Linked List \n\t     [h] Printing the Head Node (Data) of the Linked List \n\t     [t] Printing the Tail Node of the Linked List \n\t     [r] Printing the Linked List in Reverse \n\t     [R] inPlace Reversal of the Linked List (Head->Tail | Tail->Head) \n\t     [s] Searching the Node inside the Linked List \n\t     [#] Clearing the Linked List \n\t     [?] LinkedListInfinityEngine_CPP - RULES & USAGE \n\t     [!]  Exit / Stop ";
 }
  
 /*
