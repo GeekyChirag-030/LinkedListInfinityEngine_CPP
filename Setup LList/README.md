@@ -2,12 +2,12 @@
 
 For Windows users, a pre-built installer is included in:
 
-**/Setup LList/LList_Engine Setup Application V1.0.exe**
+**/Setup LList/LinkedListInfnityEnginev1.0.1.exe**
 
 ### ✅ How to Use the Installer:
 
 1. Navigate to your `Setup LList/` directory inside this repository.
-2. Run `LinkedListInfinityEngine_Setup.exe` (double-click).
+2. Run `LinkedListInfnityEnginev1.0.1.exe` (double-click).
 3. Follow the installer wizard:
    - Choose destination path (default: `C:\Program Files\LinkedListInfinityEngine_CPP`)
    - Accept the License (MIT License)
