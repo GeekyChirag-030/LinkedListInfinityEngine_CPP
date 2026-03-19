@@ -46,6 +46,7 @@ Easy-to-understand printed interface + clean OOP-based structure makes it perfec
 | Delete Node         | From head, tail, or any index |
 | Operator Overload   | `+`, `++`, `-`, `--`, `>>`, `<<` |
 | Reverse Print       | Print the list in reverse using recursion |
+| InPlace Reverse     | InPlace Reversing of the Linked List |
 | Search Node         | Find a node by data and return its 1-based index |
 | Size Tracking       | Auto-tracks list size with every insert/delete |
 | Head & Tail Access  | Print head and tail data directly |
@@ -103,6 +104,7 @@ ________________________________________________________________________________
  [h]  Show Data at Head
  [t]  Show Data at Tail
  [r]  Print Reverse (Recursive)
+ [R]  inPlace Reversal of the Linked List 
  [s]  Search Node by Data
  [#]  Clear Entire Linked List
  [?]  Show Rules and Operator Usage
@@ -126,6 +128,7 @@ remBegin()   Remove from start
 prHead()     Data at Head
 prTail()     Data at Tail
 printRevLList()  Recursive Reverse Print
+reverseLList() inPlace reversal of the Linked List 
 searchNodeLList(value)  Find node by data
 getSize()     Total Nodes
 #       Clear Entire List
@@ -203,7 +206,7 @@ See `LICENSE.txt` for full usage permissions.
 
 ## Author
 
-**DSA CP Architect &  Problem Solver**  
+**Problem Solver**  
 > _"Built not just to run… but to **learn, simulate and master.**"_  
 
 ---
@@ -214,14 +217,8 @@ See `LICENSE.txt` for full usage permissions.
 - Launches the CLI app with full menu system.
 - Clean install/uninstall supported.
 
+## Edge Cases 
 ---
-
-## To Compile Manually
-
-```bash
-g++ useLList.cpp -o LList.exe
-./LList.exe
-```
 
 | ✅ Edge Case | Handled? |
 |-------------|----------|
@@ -249,9 +246,6 @@ Show your support by:
 ##### Built by  A Problem Solver.
 ##### Designed for Structured Thinking.
 ##### Lives Forever in Memory and Logic.
-----
-#### Here is the Demo Video of the Linked List Infininity Engine👇 
 
-https://github.com/user-attachments/assets/25e4b0d3-698f-4b90-bb0f-f37636820d37
 
 
